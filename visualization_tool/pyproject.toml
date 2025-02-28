@@ -1,0 +1,37 @@
+[project]
+name = "visualization-tool"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "emiel",email = "emiel.deprost@ugent.be"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datashader (>=0.17.0,<0.18.0)",
+    # "numba (>=0.61.0,<0.62.0)",
+    "panel (>=1.6.1,<2.0.0)",
+    "holoviews (>=1.20.1,<2.0.0)",
+    "rioxarray (>=0.18.2,<0.19.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "numpy (<2.2)",
+    "pandas-stubs (>=2.2.3.241126,<3.0.0.0)",
+    "pyturbojpeg (>=1.7.7,<2.0.0)",
+    "watchfiles (>=1.0.4,<2.0.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+
+
+[tool.poetry.group.dev.dependencies]
+pyinstrument = "^5.0.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "UP", "B", "SIM", "I", "C90", "RUF"]
+ignore = ["E402", "E501", "B018"]
